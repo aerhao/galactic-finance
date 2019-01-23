@@ -1,0 +1,12 @@
+### Enviornment ###
+.vscode
+env/
+.DS_Store
+
+
+### Django ###
+*.log
+*.pot
+*.pyc
+__pycache__/
+media
