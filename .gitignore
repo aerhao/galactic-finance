@@ -2,6 +2,7 @@
 .vscode
 env/
 .DS_Store
+secrets/
 
 
 ### Django ###
@@ -10,3 +11,4 @@ env/
 *.pyc
 __pycache__/
 media
+/static/
