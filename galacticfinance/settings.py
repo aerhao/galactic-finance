@@ -24,14 +24,15 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = secrets.SECRET_KEY
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = secrets.DEBUG
 
-ALLOWED_HOSTS = ['157.230.188.143', 'galacticfinance.com', 'www.galacticfinance.com', '127.0.0.1']
+ALLOWED_HOSTS = ['galacticfinance.com', 'www.galacticfinance.com', '127.0.0.1']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'pages.apps.PagesConfig', # Responsible for displaying static pages such as the landing page.
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
