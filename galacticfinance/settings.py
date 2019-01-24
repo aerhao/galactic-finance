@@ -56,7 +56,7 @@ ROOT_URLCONF = 'galacticfinance.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -128,3 +128,8 @@ STATIC_URL = '/static/'
 
 # Specifies location to store static files and assets when collected.
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+
+# Where to look for static assets when collect is run.
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'galacticfinance/static')
+]
