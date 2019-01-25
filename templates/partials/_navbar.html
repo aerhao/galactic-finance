@@ -1,15 +1,19 @@
  <nav>
     <div class="nav-wrapper blue darken-4">
-      <a style="font-size: 25px;" href="#" id="logo" class="brand-logo">Galactic Finance</a>
-      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <a style="font-size: 20px; font-family: 'Orbitron', sans-serif;" 
+        href="{% url 'index' %}" id="logo" class="brand-logo">Galactic Finance
+      </a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+        <i class="material-icons">menu</i>
+      </a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="#">Login</a></li>
-        <li><a href="#">Signup</a></li>
+        <li><a href="{% url 'login' %}">Login</a></li>
+        <li><a href="{% url 'signup' %}">Signup</a></li>
       </ul>
     </div>
   </nav>
 
   <ul class="sidenav" id="mobile-demo">
-    <li><a href="#">Login</a></li>
-    <li><a href="#">Signup</a></li>
+    <li><a href="{% url 'login' %}">Login</a></li>
+    <li><a href="{% url 'signup' %}">Signup</a></li>
   </ul>
