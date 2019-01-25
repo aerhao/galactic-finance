@@ -134,3 +134,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'galacticfinance/static')
 ]
+
+from django.contrib.messages import constants as messages
+MESSAGE_TAGS = {
+    messages.INFO: ''
+}

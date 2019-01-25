@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
+from django.contrib import messages
 
 def login(request):
     return render(request, 'accounts/login.html', {})
@@ -15,7 +16,15 @@ def signup(request):
         confirm_password = request.POST['confirm-password']
 
         # Check if password match
-        if password != confirm_password or User.objects.filter(email=email).exists():
+        if password != confirm_password:
+            print('Passwords do not match.')
+            messages.error(request, 'Passwords do not match.')
+            return redirect('signup')
+        elif User.objects.filter(email=email).exists():
+            print('Email already exists.')
+            return redirect('signup')
+        elif len(password) < 8:
+            print('Passwords must be at least 8 characters.')
             return redirect('signup')
         else:
             # Create User
