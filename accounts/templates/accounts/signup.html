@@ -6,7 +6,7 @@
             <div class="card white darken-1">
                 <div class="card-content">
                     <span class="card-title"><h4>Signup</h4></span>
-                    {% include 'partials/_messages.html' %}
+                    {% include 'partials/_messages.html' %} <!-- Where messages will appear if prompted -->
                     <form action="#" method="POST">
                         {% csrf_token %}
                         <div class="input-field">
@@ -27,6 +27,12 @@
 
                         <div class="input-field">
                             <input placeholder="Confirm Password" name="confirm-password" type="password" class="validate" required>
+                        </div>
+                        <div>
+                            <ul>
+                                <li class="left">Password must be at least 8 characters long.</li> <br>
+                                <li class="left">Password must contain both capital and lowercase letters.</li> <br>
+                            </ul>
                         </div>
                     </div>
                     

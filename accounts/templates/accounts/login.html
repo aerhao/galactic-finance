@@ -5,6 +5,7 @@
         <div class="col s12 m6 offset-l3 center">
             <div class="card white darken-1">
                 <div class="card-content">
+                    {% include 'partials/_messages.html' %}
                     <span class="card-title"><h4>Login</h4></span>
                     <form action="#" method="POST">
                         {% csrf_token %}
