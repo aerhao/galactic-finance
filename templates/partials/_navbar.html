@@ -8,7 +8,7 @@
       </a>
       <ul class="right hide-on-med-and-down">
       {% if user.is_authenticated %}
-         <li><a href="{% url 'index' %}">Dashboard</a></li>
+         <li><a href="{% url 'dashboard' %}">Dashboard</a></li>
         <li><a href="{% url 'logout' %}">Logout</a></li>
       {% else %}
         <li><a href="{% url 'login' %}">Login</a></li>
@@ -20,7 +20,7 @@
 
   <ul class="sidenav" id="mobile-demo">
     {% if user.is_authenticated %}
-         <li><a href="{% url 'index' %}">Dashboard</a></li>
+         <li><a href="{% url 'dashboard' %}">Dashboard</a></li>
         <li><a href="{% url 'logout' %}">Logout</a></li>
       {% else %}
         <li><a href="{% url 'login' %}">Login</a></li>

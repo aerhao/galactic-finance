@@ -34,6 +34,7 @@ ALLOWED_HOSTS = ['galacticfinance.com', 'www.galacticfinance.com', '127.0.0.1']
 INSTALLED_APPS = [
     'pages.apps.PagesConfig', # Responsible for displaying static pages such as the landing page.
     'accounts.apps.AccountsConfig', # Responsible for user registration, login, logout, and password management.
+    'portfolio.apps.PortfolioConfig', # Responsible for displaying the users portfolio details.
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
